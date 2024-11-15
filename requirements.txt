@@ -1,9 +1,11 @@
 pandas
 numpy
-tf-keras
+tensorflow
 matplotlib
 pillow
 seaborn
 plotly
 scikit-learn
+opendatasets
+IPython
 
