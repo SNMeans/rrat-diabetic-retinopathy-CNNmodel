@@ -11,7 +11,7 @@ from utils import load_and_preprocess_data, create_generators, plot_class_distri
 train_labels_path = 'data/diabetic-retinopathy-detection/trainLabels.csv'
 train_dir = 'data/diabetic-retinopathy-detection/train'
 
-#Debugging print statements
+#Debugging :Confirm paths
 print(f"Train labels path: {train_labels_path}")
 print(f"Training directory: {train_dir}")
 
