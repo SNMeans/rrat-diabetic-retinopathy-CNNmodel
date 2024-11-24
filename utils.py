@@ -10,6 +10,9 @@ from PIL import Image
 
 # Load and preprocess data
 def load_and_preprocess_data(train_labels_path, train_dir):
+    # Debugging: Check the incoming path
+    print(f"Looking for trainLabels.csv at: {train_labels_path}")
+    
     labels_df = pd.read_csv(train_labels_path)
     labels_df['Labels'] = labels_df['level'].astype(str)
     labels_df['image_path'] = labels_df['image'].apply(lambda x: os.path.join(train_dir, f"{x}.jpeg"))
