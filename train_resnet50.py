@@ -15,9 +15,9 @@ import matplotlib.pyplot as plt
 train_labels_path = os.path.abspath('data/diabetic-retinopathy-detection/trainLabels.csv')
 train_dir = os.path.abspath('data/diabetic-retinopathy-detection/train')
 
-# Debugging: Confirm paths
-print(f"Train labels path: {train_labels_path}")
-print(f"Training directory: {train_dir}")
+# Debugging: Print the absolute paths
+print(f"Absolute path to trainLabels.csv: {train_labels_path}")
+print(f"Absolute path to train directory: {train_dir}")
 
 # Load and preprocess data
 labels_df = load_and_preprocess_data(train_labels_path, train_dir)
