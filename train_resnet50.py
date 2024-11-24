@@ -12,7 +12,7 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCh
 import matplotlib.pyplot as plt
 
 # Paths
-train_labels_path = 'CNN-model/data/trainLabels.csv'
+train_labels_path = train_labels_path = 'CNN-model/data/diabetic-retinopathy-detection/trainLabels.csv'
 train_dir = 'CNN-model/data/train'
 
 # Load and preprocess data
