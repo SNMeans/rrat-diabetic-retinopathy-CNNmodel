@@ -11,9 +11,9 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCheckpoint
 import matplotlib.pyplot as plt
 
-# Paths
-train_labels_path = train_labels_path = 'CNN-model/data/diabetic-retinopathy-detection/trainLabels.csv'
-train_dir = 'CNN-model/data/diabetic-retinopathy-detection/train'
+# Use absolute paths for both trainLabels.csv and the training directory
+train_labels_path = os.path.abspath('data/diabetic-retinopathy-detection/trainLabels.csv')
+train_dir = os.path.abspath('data/diabetic-retinopathy-detection/train')
 
 # Debugging: Confirm paths
 print(f"Train labels path: {train_labels_path}")
