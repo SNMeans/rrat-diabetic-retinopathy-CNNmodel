@@ -13,7 +13,8 @@ import matplotlib.pyplot as plt
 
 # Paths
 train_labels_path = train_labels_path = 'CNN-model/data/diabetic-retinopathy-detection/trainLabels.csv'
-train_dir = 'CNN-model/data/train'
+train_dir = 'CNN-model/data/diabetic-retinopathy-detection/train'
+
 
 # Load and preprocess data
 labels_df = load_and_preprocess_data(train_labels_path, train_dir)
