@@ -95,3 +95,22 @@ def visualize_images(labels_df, train_dir):
 
     fig.tight_layout()
     plt.show()
+
+# Create a test data generator
+def create_test_generator(test_dir):
+    """
+    Creates a test data generator for model inference.
+    Parameters:
+    - test_dir (str): Path to the test images directory.
+    Returns:
+    - test_generator: Keras generator for the test dataset.
+    """
+    test_datagen = ImageDataGenerator(rescale=1.0 / 255)  # Only rescale, no augmentation
+    test_generator = test_datagen.flow_from_directory(
+        test_dir,
+        target_size=(256, 256),
+        batch_size=32,
+        class_mode=None,  # No labels for test data
+        shuffle=False  # Keep the order consistent
+    )
+    return test_generator
