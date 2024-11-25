@@ -1,0 +1,92 @@
+11/24/24: 4:45pm - 11:14pm | 20 epochs completed
+$ python train_resnet50.py
+Absolute path to trainLabels.csv: C:\Users\sumin\Documents\VScode\ResNet\CNN-model\data\diabetic-retinopathy-detection\trainLabels.csv
+Absolute path to train directory: C:\Users\sumin\Documents\VScode\ResNet\CNN-model\data\diabetic-retinopathy-detection\train
+Looking for trainLabels.csv at: C:\Users\sumin\Documents\VScode\ResNet\CNN-model\data\diabetic-retinopathy-detection\trainLabels.csv
+Found 29858 validated image filenames belonging to 5 classes.
+Found 5268 validated image filenames belonging to 5 classes.
+Found 35126 validated image filenames belonging to 5 classes.
+2024-11-24 16:44:32.178681: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/resnet/resnet50_weights_tf_dim_ordering_tf_kernels_notop.h5
+94765736/94765736 [==============================] - 2s 0us/step
+Epoch 1/20
+933/933 [==============================] - ETA: 0s - loss: 0.9233 - accuracy: 0.7312   
+Epoch 1: val_loss improved from inf to 0.95141, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1326s 1s/step - loss: 0.9233 - accuracy: 0.7312 - val_loss: 0.9514 - val_accuracy: 0.7344 - lr: 0.0010
+Epoch 2/20
+933/933 [==============================] - ETA: 0s - loss: 0.8767 - accuracy: 0.7350   
+Epoch 2: val_loss improved from 0.95141 to 0.85916, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1158s 1s/step - loss: 0.8767 - accuracy: 0.7350 - val_loss: 0.8592 - val_accuracy: 0.7342 - lr: 0.0010
+Epoch 3/20
+933/933 [==============================] - ETA: 0s - loss: 0.8729 - accuracy: 0.7349   
+Epoch 3: val_loss did not improve from 0.85916
+933/933 [==============================] - 1137s 1s/step - loss: 0.8729 - accuracy: 0.7349 - val_loss: 0.8592 - val_accuracy: 0.7346 - lr: 0.0010
+Epoch 4/20
+933/933 [==============================] - ETA: 0s - loss: 0.8727 - accuracy: 0.7349   
+Epoch 4: val_loss did not improve from 0.85916
+933/933 [==============================] - 1142s 1s/step - loss: 0.8727 - accuracy: 0.7349 - val_loss: 0.8613 - val_accuracy: 0.7340 - lr: 0.0010
+Epoch 5/20
+933/933 [==============================] - ETA: 0s - loss: 0.8732 - accuracy: 0.7348   
+Epoch 5: val_loss improved from 0.85916 to 0.85876, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1159s 1s/step - loss: 0.8732 - accuracy: 0.7348 - val_loss: 0.8588 - val_accuracy: 0.7346 - lr: 0.0010
+Epoch 6/20
+933/933 [==============================] - ETA: 0s - loss: 0.8733 - accuracy: 0.7348   
+Epoch 6: val_loss improved from 0.85876 to 0.85761, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1160s 1s/step - loss: 0.8733 - accuracy: 0.7348 - val_loss: 0.8576 - val_accuracy: 0.7348 - lr: 0.0010
+Epoch 7/20
+933/933 [==============================] - ETA: 0s - loss: 0.8731 - accuracy: 0.7348   
+Epoch 7: val_loss did not improve from 0.85761
+933/933 [==============================] - 1156s 1s/step - loss: 0.8731 - accuracy: 0.7348 - val_loss: 0.8583 - val_accuracy: 0.7351 - lr: 0.0010
+Epoch 8/20
+933/933 [==============================] - ETA: 0s - loss: 0.8724 - accuracy: 0.7350   
+Epoch 8: val_loss did not improve from 0.85761
+933/933 [==============================] - 1143s 1s/step - loss: 0.8724 - accuracy: 0.7350 - val_loss: 0.8584 - val_accuracy: 0.7348 - lr: 0.0010
+Epoch 9/20
+933/933 [==============================] - ETA: 0s - loss: 0.8725 - accuracy: 0.7348   
+Epoch 9: val_loss did not improve from 0.85761
+933/933 [==============================] - 1143s 1s/step - loss: 0.8725 - accuracy: 0.7348 - val_loss: 0.8586 - val_accuracy: 0.7346 - lr: 0.0010
+Epoch 10/20
+933/933 [==============================] - ETA: 0s - loss: 0.8712 - accuracy: 0.7349   
+Epoch 10: val_loss did not improve from 0.85761
+933/933 [==============================] - 1167s 1s/step - loss: 0.8712 - accuracy: 0.7349 - val_loss: 0.8582 - val_accuracy: 0.7344 - lr: 2.0000e-04
+Epoch 11/20
+933/933 [==============================] - ETA: 0s - loss: 0.8724 - accuracy: 0.7347   
+Epoch 11: val_loss improved from 0.85761 to 0.85668, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1145s 1s/step - loss: 0.8724 - accuracy: 0.7347 - val_loss: 0.8567 - val_accuracy: 0.7349 - lr: 2.0000e-04
+Epoch 12/20
+933/933 [==============================] - ETA: 0s - loss: 0.8711 - accuracy: 0.7350   
+Epoch 12: val_loss did not improve from 0.85668
+933/933 [==============================] - 1146s 1s/step - loss: 0.8711 - accuracy: 0.7350 - val_loss: 0.8580 - val_accuracy: 0.7346 - lr: 2.0000e-04
+Epoch 13/20
+933/933 [==============================] - ETA: 0s - loss: 0.8717 - accuracy: 0.7348   
+Epoch 13: val_loss did not improve from 0.85668
+933/933 [==============================] - 1149s 1s/step - loss: 0.8717 - accuracy: 0.7348 - val_loss: 0.8577 - val_accuracy: 0.7348 - lr: 2.0000e-04
+Epoch 14/20
+933/933 [==============================] - ETA: 0s - loss: 0.8708 - accuracy: 0.7349   
+Epoch 14: val_loss did not improve from 0.85668
+933/933 [==============================] - 1164s 1s/step - loss: 0.8708 - accuracy: 0.7349 - val_loss: 0.8591 - val_accuracy: 0.7346 - lr: 2.0000e-04
+Epoch 15/20
+933/933 [==============================] - ETA: 0s - loss: 0.8712 - accuracy: 0.7349   
+Epoch 15: val_loss did not improve from 0.85668
+933/933 [==============================] - 1150s 1s/step - loss: 0.8712 - accuracy: 0.7349 - val_loss: 0.8579 - val_accuracy: 0.7346 - lr: 4.0000e-05
+Epoch 16/20
+933/933 [==============================] - ETA: 0s - loss: 0.8713 - accuracy: 0.7348   
+Epoch 16: val_loss improved from 0.85668 to 0.85515, saving model to CNN-model/models\resnet50_best_model.h5
+933/933 [==============================] - 1139s 1s/step - loss: 0.8713 - accuracy: 0.7348 - val_loss: 0.8552 - val_accuracy: 0.7355 - lr: 4.0000e-05
+Epoch 17/20
+933/933 [==============================] - ETA: 0s - loss: 0.8715 - accuracy: 0.7349   
+Epoch 17: val_loss did not improve from 0.85515
+933/933 [==============================] - 1163s 1s/step - loss: 0.8715 - accuracy: 0.7349 - val_loss: 0.8565 - val_accuracy: 0.7351 - lr: 4.0000e-05
+Epoch 18/20
+933/933 [==============================] - ETA: 0s - loss: 0.8713 - accuracy: 0.7348   
+Epoch 18: val_loss did not improve from 0.85515
+933/933 [==============================] - 1158s 1s/step - loss: 0.8713 - accuracy: 0.7348 - val_loss: 0.8581 - val_accuracy: 0.7344 - lr: 4.0000e-05
+Epoch 19/20
+933/933 [==============================] - ETA: 0s - loss: 0.8708 - accuracy: 0.7347   
+Epoch 19: val_loss did not improve from 0.85515
+933/933 [==============================] - 1141s 1s/step - loss: 0.8708 - accuracy: 0.7347 - val_loss: 0.8576 - val_accuracy: 0.7348 - lr: 4.0000e-05
+Epoch 20/20
+933/933 [==============================] - ETA: 0s - loss: 0.8713 - accuracy: 0.7347   
+Epoch 20: val_loss did not improve from 0.85515
+933/933 [==============================] - 1152s 1s/step - loss: 0.8713 - accuracy: 0.7347 - val_loss: 0.8584 - val_accuracy: 0.7344 - lr: 1.0000e-05
