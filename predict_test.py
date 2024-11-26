@@ -1,4 +1,5 @@
 import os
+import random
 import numpy as np
 import pandas as pd
 from tensorflow.keras.models import load_model
@@ -35,7 +36,6 @@ print(f"Selected {len(selected_image_files)} images for prediction.")
 print(f"Predicting on test images in {test_dir}...")
 predictions = []
 image_files = [f for f in os.listdir(test_dir) if f.endswith('.jpeg') or f.endswith('.jpg')]
-
 for img_file in image_files:
     img_path = os.path.join(test_dir, img_file)
     preprocessed_img = preprocess_image(img_path)
