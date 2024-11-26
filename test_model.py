@@ -8,7 +8,7 @@ import os
 
 # Paths to model and test data
 model_path = 'CNN-model/models/resnet50_best_model.h5'
-test_dir = 'CNN-model/data/diabetic-retinopathy-detection/test'
+test_dir = os.path.abspath('data/diabetic-retinopathy-detection/test')
 
 # Load the trained model
 print("Loading model...")
