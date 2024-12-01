@@ -19,7 +19,7 @@ IMG_SIZE = 256  # Adjust this based on your model's input size
 BATCH_SIZE = 32  # Optional: Use batching for large datasets
 
 # Helper function to preprocess images
-def preprocess_batch(image_path):
+def preprocess_batch(image_paths):
     batch = []
     for image_path in image_paths:
         img = load_img(image_path, target_size=(IMG_SIZE, IMG_SIZE))
