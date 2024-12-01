@@ -54,7 +54,11 @@ for batch_idx in range(num_batches):
     # Store predictions
     for img_file, pred in zip(batch_files, batch_preds):
         predicted_class = np.argmax(pred, axis=-1)  # Assuming a classification model
-        predictions.append({'image': img_file, 'predicted_class': int(predicted_class)})
+        predictions.append({
+            'image': img_file,
+            'predicted_class': int(predicted_class),
+            'class_probabilities': pred.tolist()  # Add probabilities for each class
+        })
 
     print(f"Processed batch {batch_idx + 1}/{num_batches}...")
 
