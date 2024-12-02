@@ -40,10 +40,15 @@ The Retinopathy Risk Assessment CNN Model is a component of the RRAT web applica
     pip install -r requirements.txt
     ```
 
+4. Copy and update the `dot-env-template` and rename it to `.env`
+
 ## Usage
 1. **Download Dataset**: Use the Kaggle API to download the training data and place it in the specified folder.
 2. **Train the Model**: Run the training script to create and save the model checkpoints.
-3. **API Endpoint**: Start the API server to handle prediction requests from RRAT.
+3. **API Endpoint**: Start the API server to handle prediction requests from RRAT. Run the following from the root directory
+```bash
+python runserver.py
+```
 
 ## Contributing
 Please follow the GitHub flow for contributions:
