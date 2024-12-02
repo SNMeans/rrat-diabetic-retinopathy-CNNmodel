@@ -3,6 +3,7 @@ annotated-types==0.7.0
 anyio==4.6.2.post1
 asttokens==3.0.0
 astunparse==1.6.3
+black==24.10.0
 bleach==6.2.0
 certifi==2024.8.30
 charset-normalizer==3.4.0
@@ -42,6 +43,7 @@ matplotlib==3.9.3
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 ml-dtypes==0.4.1
+mypy-extensions==1.0.0
 namex==0.0.8
 numpy==2.0.2
 opendatasets==0.1.22
@@ -50,7 +52,9 @@ optree==0.13.1
 packaging==24.2
 pandas==2.2.3
 parso==0.8.4
+pathspec==0.12.1
 pillow==11.0.0
+platformdirs==4.3.6
 plotly==5.24.1
 prompt_toolkit==3.0.48
 protobuf==5.29.0
