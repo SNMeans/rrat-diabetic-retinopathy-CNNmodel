@@ -14,7 +14,11 @@ models/
 # Ignore Python virtual environments
 venv/
 .Venv/
-.env/
+env/
+
+# Ignore environment variables
+.env
+.env.local
 
 # Ignore Python cache files
 __pycache__/
