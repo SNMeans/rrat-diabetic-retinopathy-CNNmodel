@@ -1,4 +1,3 @@
-# utils.py
 # Purpose: Contains reusable functions for loading, preprocessing, data generators, and dataset visualization.
 # Used by main.py for dataset exploration and by train_resnet50.py for model training.
 import os
