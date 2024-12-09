@@ -45,7 +45,7 @@ def predict_single_image(image_url, model):
     return predicted_class, confidence
 
 
-# Predict the class of the single image
+# Predict the class of the single image + confidence
 predicted_class, confidence = predict_single_image(IMAGE_URL, model)
 
 # Define class labels
