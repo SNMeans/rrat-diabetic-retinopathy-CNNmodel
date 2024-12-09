@@ -1,9 +1,9 @@
-# 11/24/24 Script to verify that the best model was saved 
+# 11/24/24 Script to verify that the best model was saved
 
 from tensorflow.keras.models import load_model
 
 # Path to the saved model
-model_path = 'CNN-model/models/resnet50_best_model.h5'
+model_path = "CNN-model/models/resnet50_best_model.h5"
 
 # Verify loading the model
 try:

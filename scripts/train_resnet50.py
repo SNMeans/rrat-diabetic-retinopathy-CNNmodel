@@ -12,8 +12,10 @@ from tensorflow.keras.callbacks import ReduceLROnPlateau, EarlyStopping, ModelCh
 import matplotlib.pyplot as plt
 
 # Use absolute paths for both trainLabels.csv and the training directory
-train_labels_path = os.path.abspath('data/diabetic-retinopathy-detection/trainLabels.csv')
-train_dir = os.path.abspath('data/diabetic-retinopathy-detection/train')
+train_labels_path = os.path.abspath(
+    "data/diabetic-retinopathy-detection/trainLabels.csv"
+)
+train_dir = os.path.abspath("data/diabetic-retinopathy-detection/train")
 
 # Debugging: Print the absolute paths
 print(f"Absolute path to trainLabels.csv: {train_labels_path}")
@@ -24,24 +26,35 @@ labels_df = load_and_preprocess_data(train_labels_path, train_dir)
 train_generator, validation_generator, _ = create_generators(labels_df)
 
 # Build the ResNet50 model
-base_model = ResNet50(weights='imagenet', include_top=False, input_shape=(256, 256, 3))
+base_model = ResNet50(weights="imagenet", include_top=False, input_shape=(256, 256, 3))
 for layer in base_model.layers:
     layer.trainable = False
 
 x = GlobalAveragePooling2D()(base_model.output)
-x = Dense(1024, activation='relu')(x)
+x = Dense(1024, activation="relu")(x)
 x = Dropout(0.5)(x)
-x = Dense(512, activation='relu')(x)
+x = Dense(512, activation="relu")(x)
 x = Dropout(0.5)(x)
-predictions = Dense(5, activation='softmax')(x)
+predictions = Dense(5, activation="softmax")(x)
 
 model = Model(inputs=base_model.input, outputs=predictions)
-model.compile(optimizer=Adam(learning_rate=0.001), loss='categorical_crossentropy', metrics=['accuracy'])
+model.compile(
+    optimizer=Adam(learning_rate=0.001),
+    loss="categorical_crossentropy",
+    metrics=["accuracy"],
+)
 
 # Callbacks
-checkpoint = ModelCheckpoint('CNN-model/models/resnet50_best_model.h5', save_best_only=True, monitor='val_loss', verbose=1)
-reduce_lr = ReduceLROnPlateau(monitor='val_loss', factor=0.2, patience=3, min_lr=1e-5)
-early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+checkpoint = ModelCheckpoint(
+    "CNN-model/models/resnet50_best_model.h5",
+    save_best_only=True,
+    monitor="val_loss",
+    verbose=1,
+)
+reduce_lr = ReduceLROnPlateau(monitor="val_loss", factor=0.2, patience=3, min_lr=1e-5)
+early_stopping = EarlyStopping(
+    monitor="val_loss", patience=5, restore_best_weights=True
+)
 callbacks = [checkpoint, reduce_lr, early_stopping]
 
 # Train the model
@@ -51,31 +64,31 @@ history = model.fit(
     epochs=20,
     steps_per_epoch=train_generator.samples // train_generator.batch_size,
     validation_steps=validation_generator.samples // validation_generator.batch_size,
-    callbacks=callbacks
+    callbacks=callbacks,
 )
 
 # Save the final model
-model.save('CNN-model/models/resnet50_final_model.h5')
+model.save("CNN-model/models/resnet50_final_model.h5")
 
 # Plot training history
 plt.figure(figsize=(12, 4))
 
 # Accuracy
 plt.subplot(1, 2, 1)
-plt.plot(history.history['accuracy'], label='Train Accuracy')
-plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
-plt.title('Accuracy')
-plt.xlabel('Epochs')
-plt.ylabel('Accuracy')
+plt.plot(history.history["accuracy"], label="Train Accuracy")
+plt.plot(history.history["val_accuracy"], label="Validation Accuracy")
+plt.title("Accuracy")
+plt.xlabel("Epochs")
+plt.ylabel("Accuracy")
 plt.legend()
 
 # Loss
 plt.subplot(1, 2, 2)
-plt.plot(history.history['loss'], label='Train Loss')
-plt.plot(history.history['val_loss'], label='Validation Loss')
-plt.title('Loss')
-plt.xlabel('Epochs')
-plt.ylabel('Loss')
+plt.plot(history.history["loss"], label="Train Loss")
+plt.plot(history.history["val_loss"], label="Validation Loss")
+plt.title("Loss")
+plt.xlabel("Epochs")
+plt.ylabel("Loss")
 plt.legend()
 
 plt.tight_layout()
