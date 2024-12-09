@@ -9,6 +9,11 @@ data/
 # Ignore Python virtual environments
 venv/
 .Venv/
+env/
+
+# Ignore environment variables
+.env
+.env.local
 
 # Ignore Python cache files
 __pycache__/
