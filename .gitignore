@@ -1,11 +1,6 @@
 # Ignore data directory and its contents
 data/
 
-# Ignore model checkpoints and temporary files
-models/
-*.h5
-*.ckpt
-
 # Ignore large media files
 *.zip
 *.jpeg
@@ -33,5 +28,3 @@ data/
 *.jpeg
 *.png
 
-# Allow model weights
-!CNN-model/models/resnet50_best_model.h5
