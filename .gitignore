@@ -27,3 +27,11 @@ __pycache__/
 *.tmp
 *.bak
 .DS_Store
+
+# Ignore data directories and images
+data/
+*.jpeg
+*.png
+
+# Allow model weights
+!CNN-model/models/resnet50_best_model.h5
