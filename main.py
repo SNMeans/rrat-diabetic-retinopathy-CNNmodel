@@ -1,5 +1,11 @@
 from fastapi import FastAPI
-from api.router import router
+from analyze import router as analyze_router
+from root import router as root_router
 
+# Create the FastAPI instance
 app = FastAPI()
-app.include_router(router)
+
+# Include the routers
+app.include_router(root_router, prefix="/")
+app.include_router(analyze_router, prefix="/analyze")
+
