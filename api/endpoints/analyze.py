@@ -1,14 +1,20 @@
+import os
+import sys
+from io import BytesIO
+
+project_root = r"C:\Users\sumin\code\ResNet\CNN-model"
+sys.path.append(project_root)
+
+import numpy as np
+import requests
 from fastapi import APIRouter, HTTPException
+from PIL import Image
 from pydantic import BaseModel
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
-from PIL import Image
-from io import BytesIO
-import requests
-import numpy as np
-import os
 from dotenv import load_dotenv
-from single_image_test import predict_single_image
+
+#from training_scripts.single_image_test import predict_single_image
 
 # Load environment variables 
 load_dotenv()

@@ -8,7 +8,7 @@ import os
 from io import BytesIO
 
 # Path to your trained model and the test image
-MODEL_PATH = r"C:\Users\sumin\Documents\VScode\ResNet\CNN-model\models\resnet50_diabetic_retinopathy_20241209_114444.h5"
+MODEL_PATH = os.getenv("MODEL_PATH")
 IMAGE_URL = "https://res.cloudinary.com/rrat-dkcatdj1w/image/upload/v1733752972/rrat/retina_photos/os--775fafc5-a252-4598-8a14-f303f2e85212--2024-12-09--14:02.jpg"
 
 # Load the trained model
