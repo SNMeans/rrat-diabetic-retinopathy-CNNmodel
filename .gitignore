@@ -1,14 +1,15 @@
 # Ignore data directory and its contents
 data/
 
-# Ignore image and media files
+# Ignore model checkpoints and temporary files
+models/
+*.h5
+*.ckpt
+
+# Ignore large media files
 *.zip
 *.jpeg
 *.png
-
-# Ignore model directory and all .h5 files
-models/
-*.h5
 
 # Ignore Python virtual environments
 venv/
@@ -23,7 +24,7 @@ env/
 __pycache__/
 *.pyc
 
-# Ignore Jupyter Notebook checkpoints
+# Ignore Jupyter Notebook checkpoints (if using notebooks)
 .ipynb_checkpoints/
 
 # Ignore logs and temporary files
@@ -31,4 +32,3 @@ __pycache__/
 *.tmp
 *.bak
 .DS_Store
-
