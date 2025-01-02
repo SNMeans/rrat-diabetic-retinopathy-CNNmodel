@@ -43,6 +43,18 @@ This repository is a submodule of the main **EyeQ** project:
 - **REST API**:
   - Accepts uploaded images, processes predictions, and returns results which are displayed on the patient dashboard.
 
+### **Below are examples of the retina photo processing workflow in the EyeQ application:**
+
+<div style="display: flex; align-items: flex-start; gap: 20px;">
+  <img src="https://github.com/SNMeans/rrat-diabetic-retinopathy-CNNmodel/blob/main/images/preprocess.png" alt="Uploaded Retina Photo" style="width: 300px; height: 300px;">
+  <img src="https://github.com/SNMeans/rrat-diabetic-retinopathy-CNNmodel/blob/main/images/display.png" alt="Processed Retina Photo" style="width: 300px; height: 300px;">
+</div>
+
+1. **Left Image**: Retina photo uploaded to the application, ready for analysis.
+2. **Right Image**: The processed retina photo with a result of "Moderate" severity, displayed after the prediction.
+
+
+
 ---
 
 ## **Dataset and Preprocessing**
