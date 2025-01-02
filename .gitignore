@@ -10,6 +10,8 @@ models/
 *.zip
 *.jpeg
 *.png
+
+# Allow PNG files in the images directory
 !images/*.png
 
 # Ignore Python virtual environments
