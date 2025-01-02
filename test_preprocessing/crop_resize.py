@@ -2,14 +2,7 @@ import os
 from PIL import Image
 
 def crop_and_resize_images(input_path, output_path, img_size=256):
-    """
-    Crops, resizes, and saves images using Pillow.
-
-    Args:
-    - input_path (str): Absolute path to the input image directory.
-    - output_path (str): Absolute path to save resized images.
-    - img_size (int): Size to resize images to.
-    """
+   
     os.makedirs(output_path, exist_ok=True)
 
     for subdir in os.listdir(input_path):
