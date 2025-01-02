@@ -14,9 +14,9 @@ The CNN Model is a component of the django based EyeQ web application. It perfor
 Below are screenshots of the EyeQ application showcasing the homepage and login screen:
 <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
   <img src="https://github.com/SNMeans/rrat-diabetic-retinopathy-CNNmodel/blob/main/images/homepage.png" 
-       alt="Homepage" style="height: 300px; width: auto; border: 2px solid #ddd; border-radius: 8px;">
+       alt="Homepage" style="height: 250px; width: auto; border: 2px solid #ddd; border-radius: 8px;">
   <img src="https://github.com/SNMeans/rrat-diabetic-retinopathy-CNNmodel/blob/main/images/login.png" 
-       alt="Login Screen" style="height: 300px; width: auto; border: 2px solid #ddd; border-radius: 8px;">
+       alt="Login Screen" style="height: 250px; width: auto; border: 2px solid #ddd; border-radius: 8px;">
 </div>
 
 1. **Left Image**: The homepage of the EyeQ application, providing access to patient uploads and results.
